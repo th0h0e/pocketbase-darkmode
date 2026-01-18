@@ -1,0 +1,42 @@
+// Theme toggle support
+// ====================
+// Temporary dark mode using filter: invert(1)
+// This will be gradually replaced with proper CSS variable overrides
+
+html[data-theme="dark"] {
+    filter: invert(1) hue-rotate(180deg);
+
+    // Double-invert elements that should keep original colors
+    img,
+    video,
+    canvas,
+    svg image,
+    [class*="leaflet"],
+    .chart-canvas,
+    .provider-logo img,
+    .thumb img,
+    .logo img {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+// Future: Replace invert() with proper variable overrides
+// html[data-theme="dark"] {
+//     --txtPrimaryColor:  #e8e8e8;
+//     --txtHintColor:     #a0a6ac;
+//     --txtDisabledColor: #617079;
+//
+//     --primaryColor: #e8e8e8;
+//
+//     --bodyColor: #0f0f12;
+//
+//     --baseColor:     #1a1a24;
+//     --baseAlt1Color: #252532;
+//     --baseAlt2Color: #32323f;
+//     --baseAlt3Color: #40404f;
+//     --baseAlt4Color: #5a5a6e;
+//
+//     --overlayColor:   rgba(0, 0, 0, 0.5);
+//     --tooltipColor:   rgba(255, 255, 255, 0.9);
+//     --shadowColor:    rgba(0, 0, 0, 0.3);
+// }
