@@ -140,15 +140,6 @@
                 >
                     <i class="ri-tools-line" />
                 </a>
-                <button
-                    type="button"
-                    class="menu-item"
-                    aria-label="Toggle theme"
-                    on:click={toggleTheme}
-                    use:tooltip={{ text: isDarkMode ? "Light mode" : "Dark mode", position: "right" }}
-                >
-                    <i class={isDarkMode ? "ri-sun-line" : "ri-moon-line"} />
-                </button>
             </nav>
 
             <div
@@ -164,6 +155,10 @@
                         {$superuser.email}
                     </div>
                     <hr />
+                    <button type="button" class="dropdown-item closable" role="menuitem" on:click={toggleTheme}>
+                        <i class={isDarkMode ? "ri-sun-line" : "ri-moon-line"} aria-hidden="true" />
+                        <span class="txt">{isDarkMode ? "Light mode" : "Dark mode"}</span>
+                    </button>
                     <a
                         href="/collections?collection=_superusers"
                         class="dropdown-item closable"
