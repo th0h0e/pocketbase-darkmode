@@ -9,10 +9,8 @@ html[data-theme="dark"] {
     // Double-invert elements that should keep original colors
     img,
     video,
-    canvas,
     svg image,
     [class*="leaflet"],
-    .chart-canvas,
     .provider-logo img,
     .thumb img,
     .logo img {
