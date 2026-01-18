@@ -22,8 +22,8 @@
 
     let isTinyMCEPreloaded = false;
 
-    // Theme toggle
-    let isDarkMode = localStorage.getItem("theme") === "dark";
+    // Theme toggle (dark mode is default)
+    let isDarkMode = localStorage.getItem("theme") !== "light";
 
     $: {
         if (isDarkMode) {
